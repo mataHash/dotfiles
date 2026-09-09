@@ -30,7 +30,7 @@
 
    users.users.jorys = {
      isNormalUser = true;
-     extraGroups = [ "network-manager" "wheel" ]; # Enable ‘sudo’ for the user.
+     extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
    };
 
    programs.firefox.enable = true;
