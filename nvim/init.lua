@@ -257,6 +257,8 @@ end
 -- vim.pack intro, build hooks
 -- ============================================================
 do
+
+vim.g.pack_lock_path = vim.fn.stdpath("state") .. "/nvim-pack-lock.json"
   -- [[ Intro to `vim.pack` ]]
   -- `vim.pack` is a new plugin manager built into Neovim,
   --  which provides a Lua interface for installing and managing plugins.
