@@ -69,6 +69,9 @@
      tmux
      wl-clipboard
      github-cli
+     ripgrep
+     fd
+     tree-sitter
    ];
 
   # Some programs need SUID wrappers, can be configured further or are

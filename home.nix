@@ -6,4 +6,5 @@
 
   home.stateVersion = "26.05";
   home.file.".config/hypr".source = ./hypr;
+  home.file.".config/nvim".source = ./nvim;
 }
