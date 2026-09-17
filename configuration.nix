@@ -74,6 +74,8 @@
      tree-sitter
      gcc
      nil
+     make
+     unzip
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
