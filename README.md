@@ -8,7 +8,8 @@
 ```
 - all my configuration stuff in just one file
 ## Instalation
-[^warning] make sure you're using nixos
+> [!WARNING] 
+> make sure you're using nixos
 - clone this repo
 ```
 cd
