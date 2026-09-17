@@ -7,3 +7,14 @@
                                                                                     
 ```
 - all my configuration stuff in just one file
+## Usage
+- clone this repo
+```
+cd
+git clone mataHash/dotfiles
+```
+- rebuild the config
+```
+sudo nixos-rebuild switch --flake ~/dotfiles
+```
+- Done
