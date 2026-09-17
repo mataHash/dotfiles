@@ -72,6 +72,7 @@
      ripgrep
      fd
      tree-sitter
+     gcc
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
