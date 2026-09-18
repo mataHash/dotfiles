@@ -74,7 +74,7 @@
      tree-sitter
      gcc
      nil
-     make
+     gnumake
      unzip
    ];
 
