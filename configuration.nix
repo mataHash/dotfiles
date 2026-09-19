@@ -84,7 +84,7 @@
      slurp
      fastfetch
      docker
-     kubernetes
+     kubectl
      k3s
      qemu
    ];
