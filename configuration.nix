@@ -74,11 +74,19 @@
      tree-sitter
      gcc
      nil
+     alejandra
+     lua-language-server
+     stylua
      gnumake
      unzip
      markdownlint-cli
      grim
      slurp
+     fastfetch
+     docker
+     kubernetes
+     k3s
+     qemu
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
