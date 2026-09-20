@@ -21,6 +21,8 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "kitty"
+local browser1 = "firefox"
+local browser2 = "brave"
 
 -------------------
 ---- AUTOSTART ----
@@ -244,7 +246,9 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd('grim -g "$(slurp)"'))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser1))
+hl.bind(mainMod .. "+ SHIFT + B", hl.dsp.exec_cmd(browser2))
+hl.bind("SHIFT" .. "+ Print", hl.dsp.exec_cmd('grim -g "$(slurp)"'))
 hl.bind("Print", hl.dsp.exec_cmd("grim"))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
