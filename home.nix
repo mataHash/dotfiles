@@ -59,8 +59,9 @@
   programs.gh = {
     enable = true;
     enableGitCredentialHelper = true;
-  };
-  settings = {
-    git_protocol = "https";
+
+    settings = {
+      git_protocol = "https";
+    };
   };
 }
