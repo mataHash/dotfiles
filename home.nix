@@ -60,4 +60,7 @@
     enable = true;
     enableGitCredentialHelper = true;
   };
+  settings = {
+    git_protocol = "https";
+  };
 }
