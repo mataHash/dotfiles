@@ -42,4 +42,23 @@
 	];
   };
   home.file.".config/nvim".source = ./nvim;
+  programs.git = {
+  enable = true;
+
+programs.git = {
+  enable = true;
+
+  userName = "Jorysniel Mata Nunez";
+  userEmail = "matajorysniel@gmail.com";
+
+  settings = {
+    core.editor = "nvim";
+    init.defaultBranch = "main";
+  };
+};
+
+programs.gh = {
+  enable = true;
+  enableGitCredentialHelper = true;
+};
 }
