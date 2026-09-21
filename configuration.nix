@@ -1,93 +1,95 @@
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
- nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-   networking.hostName = "nixos"; 
+  networking.hostName = "nixos";
 
   networking.networkmanager.enable = true;
 
-   time.timeZone = "America/Santo_Domingo";
+  time.timeZone = "America/Santo_Domingo";
 
-   i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
-   services.xserver.enable = true;
+  services.xserver.enable = true;
 
-   services.pipewire = {
-     enable = true;
-     pulse.enable = true;
-   };
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
-   users.users.jorys = {
-     isNormalUser = true;
-     extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
-   };
+  users.users.jorys = {
+    isNormalUser = true;
+    extraGroups = ["networkmanager" "wheel"]; # Enable ‘sudo’ for the user.
+  };
 
-   programs.firefox.enable = true;
+  programs.firefox.enable = true;
 
-   hardware.graphics.enable = true;
-   programs.uwsm.enable = true;
-   programs.hyprland = {
+  hardware.graphics.enable = true;
+  programs.uwsm.enable = true;
+  programs.hyprland = {
     enable = true;
     xwayland.enable = true;
     withUWSM = true;
   };
 
-   services.libinput.enable = true;
-   services.displayManager.sddm = {
-     enable = true;
-     wayland.enable = true;
-   };
-   environment.systemPackages = with pkgs; [
-     wl-clipboard
-     tree
-     wget
-     neovim
-     curl
-     gawk
-     jq
-     ffmpeg
-     vlc
-     imv
-     zathura
-     git
-     lynx
-     ddgr
-     kitty
-     brightnessctl
-     brave
-     tmux
-     wl-clipboard
-     github-cli
-     ripgrep
-     fd
-     tree-sitter
-     gcc
-     nil
-     alejandra
-     lua-language-server
-     stylua
-     gnumake
-     unzip
-     markdownlint-cli
-     grim
-     slurp
-     fastfetch
-     docker
-     kubectl
-     k3s
-     qemu
-   ];
+  services.libinput.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+  environment.systemPackages = with pkgs; [
+    wl-clipboard
+    tree
+    wget
+    neovim
+    curl
+    gawk
+    jq
+    ffmpeg
+    vlc
+    imv
+    zathura
+    git
+    lynx
+    ddgr
+    kitty
+    brightnessctl
+    brave
+    tmux
+    wl-clipboard
+    github-cli
+    ripgrep
+    fd
+    tree-sitter
+    gcc
+    nil
+    alejandra
+    lua-language-server
+    stylua
+    gnumake
+    unzip
+    markdownlint-cli
+    grim
+    slurp
+    fastfetch
+    docker
+    kubectl
+    k3s
+    qemu
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # programs.mtr.enable = true;
@@ -101,9 +103,5 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
-
-
-  system.stateVersion = "26.05"; 
-
+  system.stateVersion = "26.05";
 }
-
