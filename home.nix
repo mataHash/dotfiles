@@ -58,10 +58,29 @@
 
   programs.gh = {
     enable = true;
-    enableGitCredentialHelper = true;
+    gitCredentialHelper.enable = true;
 
     settings = {
       git_protocol = "https";
+      prompt = "enabled";
+      prefer_editor_prompt = "disabled";
+
+      aliases = {
+        co = "pr checkout";
+      };
+      color_labels = "enabled";
+      accessible_colors = "enabled";
+      accessible_prompter = "disabled";
+      spinner = "enabled";
+    };
+  };
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      PS1="\e[0;36m\$ \e[m"
+    '';
+    shellAliases = {
+      ll = "ls -l";
     };
   };
 }
