@@ -89,6 +89,7 @@
     kubectl
     k3s
     qemu
+    base16-schemes
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
