@@ -32,8 +32,12 @@
 
   users.users.jorys = {
     isNormalUser = true;
-    extraGroups = ["networkmanager" "wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["networkmanager" "vboxusers" "wheel" "kvm"];
   };
+  nixpkgs.config.allowUnfree = true;
+
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   programs.firefox.enable = true;
 
@@ -89,6 +93,8 @@
     kubectl
     k3s
     qemu
+    swtpm
+    quickemu
     base16-schemes
   ];
 
