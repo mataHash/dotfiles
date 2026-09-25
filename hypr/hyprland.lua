@@ -8,10 +8,18 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "",
+    output   = "eDP-1",
     mode     = "preferred",
     position = "auto",
     scale    = "auto",
+})
+
+hl.monitor({
+    output   = "",
+    mode     = "1920x1080@60",
+    position = "0x0",
+    scale    = "1",
+    mirror    = "eDP-1"
 })
 
 
@@ -248,6 +256,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser1))
 hl.bind(mainMod .. "+ SHIFT + B", hl.dsp.exec_cmd(browser2))
+hl.bind(mainMod .. "+ Print", hl.dsp.exec_cmd("hyprpicker"))
 hl.bind("SHIFT" .. "+ Print", hl.dsp.exec_cmd('grim -g "$(slurp)"'))
 hl.bind("Print", hl.dsp.exec_cmd("grim"))
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())

@@ -54,6 +54,9 @@
     enable = true;
     wayland.enable = true;
   };
+  environment.sessionVariables = {
+    XDG_PICTURES_DIR = "$HOME/Pictures";
+  };
   environment.systemPackages = with pkgs; [
     wl-clipboard
     tree
@@ -64,12 +67,14 @@
     jq
     ffmpeg
     vlc
+    proton-vpn
     imv
     zathura
     git
     lynx
     ddgr
     kitty
+    hyprpicker
     brightnessctl
     brave
     tmux
@@ -96,6 +101,9 @@
     swtpm
     quickemu
     base16-schemes
+    bitwarden-cli
+    ags
+    pandoc
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
