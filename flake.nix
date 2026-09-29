@@ -31,7 +31,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.jorys = import ./home.nix;
+            home-manager.users.mata = import ./home.nix;
           }
         ];
       };

@@ -9,7 +9,6 @@
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -30,9 +29,9 @@
     pulse.enable = true;
   };
 
-  users.users.jorys = {
+  users.users.mata = {
     isNormalUser = true;
-    extraGroups = ["networkmanager" "vboxusers" "wheel" "kvm"];
+    extraGroups = ["networkmanager" "vboxusers" "wheel" "kvm" "input"];
   };
   nixpkgs.config.allowUnfree = true;
 
@@ -40,7 +39,6 @@
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
   programs.firefox.enable = true;
-
   hardware.graphics.enable = true;
   programs.uwsm.enable = true;
   programs.hyprland = {

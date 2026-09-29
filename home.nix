@@ -3,8 +3,8 @@
   pkgs,
   ...
 }: {
-  home.username = "jorys";
-  home.homeDirectory = "/home/jorys";
+  home.username = "mata";
+  home.homeDirectory = "/home/mata";
 
   home.stateVersion = "26.05";
   home.file.".config/hypr".source = ./hypr;
@@ -43,6 +43,7 @@
     ];
   };
   home.file.".config/nvim".source = ./nvim;
+  home.file.".config/waybar".source = ./waybar;
 
   programs.git = {
     enable = true;
@@ -77,10 +78,14 @@
   programs.bash = {
     enable = true;
     bashrcExtra = ''
-      PS1="\e[0;36m\$ \e[m "
+      PS1="\e[0;36m''\$ \e[m "
+      fastfetch
     '';
     shellAliases = {
       ll = "ls -l";
     };
   };
+  home.packages = with pkgs; [
+    font-awesome
+  ];
 }

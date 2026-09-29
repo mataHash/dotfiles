@@ -6,7 +6,6 @@
 ---- MONITORS ----
 ------------------
 
--- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
     output   = "eDP-1",
     mode     = "preferred",
@@ -31,6 +30,7 @@ hl.monitor({
 local terminal    = "kitty"
 local browser1 = "firefox"
 local browser2 = "brave"
+local menu = "fuzzel"
 
 -------------------
 ---- AUTOSTART ----
@@ -41,11 +41,10 @@ local browser2 = "brave"
 -- Autostart necessary processes (like notifications daemons, status bars, etc.)
 -- Or execute your favorite apps at launch like this:
 --
--- hl.on("hyprland.start", function () 
---   hl.exec_cmd(terminal)
---   hl.exec_cmd("nm-applet")
---   hl.exec_cmd("waybar & hyprpaper & firefox")
--- end)
+ hl.on("hyprland.start", function () 
+   hl.exec_cmd(terminal)
+   hl.exec_cmd("waybar &")
+ end)
 
 
 -------------------------------
@@ -254,6 +253,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser1))
 hl.bind(mainMod .. "+ SHIFT + B", hl.dsp.exec_cmd(browser2))
 hl.bind(mainMod .. "+ Print", hl.dsp.exec_cmd("hyprpicker"))
