@@ -56,6 +56,9 @@
   };
   environment.sessionVariables = {
     XDG_PICTURES_DIR = "$HOME/Pictures";
+    QT_QPA_PLATFORM = "wayland;xcb";
+    GDK_BACKEND = "wayland,x11";
+    _JAVA_AWT_OBNX_WM_NONREPARENTING = "1";
   };
   environment.systemPackages = with pkgs; [
     wl-clipboard
@@ -68,6 +71,7 @@
     ffmpeg
     vlc
     proton-vpn
+    kdePackages.kdeconnect-kde
     imv
     zathura
     git
@@ -79,6 +83,7 @@
     brave
     tmux
     wl-clipboard
+    cliphist
     github-cli
     ripgrep
     fd
@@ -94,6 +99,7 @@
     grim
     slurp
     fastfetch
+    nerd-fonts.fira-code
     docker
     kubectl
     k3s
@@ -104,6 +110,12 @@
     bitwarden-cli
     ags
     pandoc
+    fuzzel
+    waybar
+    localsend
+    syncthing
+    dunst
+    swayosd
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
