@@ -77,7 +77,7 @@
   programs.bash = {
     enable = true;
     bashrcExtra = ''
-      PS1="\e[0;36m\$ \e[m"
+      PS1="\e[0;36m\$ \e[m "
     '';
     shellAliases = {
       ll = "ls -l";
