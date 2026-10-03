@@ -44,6 +44,7 @@
   };
   home.file.".config/nvim".source = ./nvim;
   home.file.".config/waybar".source = ./waybar;
+  home.file.".config/kitty".source = ./kitty;
 
   programs.git = {
     enable = true;
@@ -78,7 +79,7 @@
   programs.bash = {
     enable = true;
     bashrcExtra = ''
-      PS1="\e[0;36m''\$ \e[m "
+      PS1='\[\e[0;36m\]\$ \[\e[m\] '
       fastfetch
     '';
     shellAliases = {

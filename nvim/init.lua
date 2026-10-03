@@ -682,7 +682,7 @@ do
 	local servers = {
 		clangd = {},
 		gopls = {},
-		-- pyright = {},
+		omnisharp = {},
 		-- tsc = {},
 		rust_analyzer = {},
 
