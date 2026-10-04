@@ -682,13 +682,15 @@ do
 	local servers = {
 		clangd = {},
 		gopls = {},
-		omnisharp = {},
-		-- tsc = {},
+		pyright = {},
 		rust_analyzer = {},
-
-		stylua = {},
-		nil_lsp = {},
-		-- Special Lua Config, as recommended by neovim help docs
+		nil_ls = {},
+    roslyn_ls  = {},
+    sqls = {},
+    vtsls = {},
+    hls = {},
+    vue_ls = {},
+    astro = {},
 		lua_ls = {
 			on_init = function(client)
 				client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)
