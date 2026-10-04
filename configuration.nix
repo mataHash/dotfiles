@@ -56,6 +56,7 @@
     XDG_PICTURES_DIR = "$HOME/Pictures";
     QT_QPA_PLATFORM = "wayland;xcb";
     GDK_BACKEND = "wayland,x11";
+    GRIM_DEFAULT_DIR = "$HOME/Pictures";
     _JAVA_AWT_OBNX_WM_NONREPARENTING = "1";
   };
   environment.systemPackages = with pkgs; [
@@ -72,6 +73,7 @@
     kdePackages.kdeconnect-kde
     imv
     zathura
+    texliveSmall
     git
     lynx
     ddgr
