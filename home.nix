@@ -79,8 +79,10 @@
   programs.bash = {
     enable = true;
     bashrcExtra = ''
-      PS1='\[\e[0;36m\]\$ \[\e[m\] '
-      fastfetch
+      __git_ps1() { :; }
+
+      PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>/dev/null);
+      PS1="\[\e[38;5;32m\]\d\[\e[0m\] \t-[\[\e[36m\]\u\[\e[0m\]@\[\e[38;5;230m\]\h\[\e[0m\]]-(\[\e[38;5;26m\]\w\[\e[0m\])-''${PS1_CMD1:+"($PS1_CMD1)"}\n\[\e[38;5;31m\]\$\[\e[0m\]"'
     '';
     shellAliases = {
       ll = "ls -l";
