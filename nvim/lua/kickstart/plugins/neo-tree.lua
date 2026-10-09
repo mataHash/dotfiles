@@ -11,4 +11,7 @@ require('neo-tree').setup {
       },
     },
   },
+  filters = {
+    dotfiles = false,
+  },
 }
