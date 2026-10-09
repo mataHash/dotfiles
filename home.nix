@@ -46,8 +46,10 @@
     enable = true;
 
     settings = {
-      name = "Jorysniel Mata Nunez";
-      email = "matajorysniel@gmail.com";
+      user = {
+        name = "Jorysniel Mata Nunez";
+        email = "matajorysniel@gmail.com";
+      };
       core.editor = "nvim";
       init.defaultBranch = "main";
     };
