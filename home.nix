@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.username = "mata";
   home.homeDirectory = "/home/mata";
 
