@@ -1,9 +1,4 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -60,7 +55,6 @@
     _JAVA_AWT_OBNX_WM_NONREPARENTING = "1";
   };
   environment.systemPackages = with pkgs; [
-    wl-clipboard
     tree
     wget
     neovim
@@ -100,6 +94,8 @@
     slurp
     fastfetch
     nerd-fonts.fira-code
+    nerd-fonts.hack
+    nerd-fonts.jetbrains-mono
     docker
     kubectl
     k3s
@@ -116,6 +112,8 @@
     syncthing
     dunst
     swayosd
+    mermerd
+    mermaid-cli
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
