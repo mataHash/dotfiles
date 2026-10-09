@@ -45,10 +45,9 @@
   programs.git = {
     enable = true;
 
-    userName = "Jorysniel Mata Nunez";
-    userEmail = "matajorysniel@gmail.com";
-
     settings = {
+      name = "Jorysniel Mata Nunez";
+      email = "matajorysniel@gmail.com";
       core.editor = "nvim";
       init.defaultBranch = "main";
     };
