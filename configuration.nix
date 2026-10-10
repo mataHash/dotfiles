@@ -63,6 +63,7 @@
     jq
     ffmpeg
     vlc
+    hyprpaper
     proton-vpn
     kdePackages.kdeconnect-kde
     imv
@@ -93,9 +94,6 @@
     grim
     slurp
     fastfetch
-    nerd-fonts.fira-code
-    nerd-fonts.hack
-    nerd-fonts.jetbrains-mono
     docker
     kubectl
     k3s

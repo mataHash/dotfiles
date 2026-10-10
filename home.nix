@@ -85,7 +85,11 @@
       ll = "ls -l";
     };
   };
+  fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     font-awesome
+    nerd-fonts.fira-code
+    nerd-fonts.hack
+    nerd-fonts.jetbrains-mono
   ];
 }
