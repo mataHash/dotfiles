@@ -43,9 +43,8 @@
   };
 
   services.libinput.enable = true;
-  services.displayManager.sddm = {
+  services.displayManager.ly = {
     enable = true;
-    wayland.enable = true;
   };
   environment.sessionVariables = {
     XDG_PICTURES_DIR = "$HOME/Pictures";
