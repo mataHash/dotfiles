@@ -46,15 +46,11 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 21,
         "spacing": 10,
-        // "icons": {
-        //   "blueman": "bluetooth",
-        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
-        // }
     },
     "clock": {
-        // "timezone": "America/New_York",
+        "timezone": "America/Santo_Domingo",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
@@ -74,7 +70,6 @@
         "format-icons": ["󰉬", "", "󰉪"]
     },
     "backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "min-brightness": 1
@@ -90,8 +85,8 @@
         "format-charging": "{capacity}% 󰃨",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "format-good": "",
+        "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "power-profiles-daemon": {

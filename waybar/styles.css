@@ -1,10 +1,12 @@
+ @import "colors.css";
+
 * {
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
+    background-color: @bg;
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
@@ -14,15 +16,6 @@ window#waybar {
 window#waybar.hidden {
     opacity: 0.2;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 window#waybar.termite {
     background-color: #3F3F3F;
@@ -39,7 +32,6 @@ button {
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
     box-shadow: inset 0 -3px #ffffff;
@@ -62,11 +54,6 @@ button:hover {
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
-}
-
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
 }
 
 #clock,
@@ -100,12 +87,12 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: @bg;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: @bg;
+    color: @fg;
 }
 
 #battery.charging, #battery.plugged {
@@ -155,43 +142,26 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    background-color: @bg;
+    color: @fg;
 }
 
 #memory {
-    background-color: #9b59b6;
+    background-color: @bg;
 }
 
 #disk {
-    background-color: #964B00;
+    background-color: @bg;
 }
 
 #backlight {
-    background-color: #90b1b1;
-}
-
-#network {
-    background-color: #2980b9;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
-}
-
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: @bg;
+    color: @fg;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
+    background-color: @bg;
+    color: @fg;
 }
 
 #wireplumber.muted {
@@ -199,8 +169,8 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    background-color: @bg;
+    color: @fg;
     min-width: 100px;
 }
 
@@ -221,7 +191,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: @bg;
 }
 
 #tray > .passive {
@@ -234,7 +204,7 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    background-color: @bg;
 }
 
 #idle_inhibitor.activated {
@@ -243,8 +213,8 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
+    background: @bg;
+    color: @fg;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
