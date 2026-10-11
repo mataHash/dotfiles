@@ -16,15 +16,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-
 button {
     box-shadow: inset 0 -3px transparent;
     border: none;
@@ -39,7 +30,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: @fg;
 }
 
 #workspaces button:hover {
@@ -55,43 +46,19 @@ button:hover {
     background-color: #eb4d4b;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#idle_inhibitor,
-#power-profiles-daemon,
-
 #window,
 #workspaces {
     margin: 0 4px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
-}
-
+#network,
+#backlight,
 #clock {
-    background-color: @bg;
+    margin: 0 8px;
 }
 
-#battery {
-    background-color: @bg;
-    color: @fg;
+#cpu {
+    margin-left: 8px;
 }
 
 #battery.charging, #battery.plugged {
@@ -106,7 +73,6 @@ button:hover {
     }
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
     color: #ffffff;
@@ -117,50 +83,20 @@ button:hover {
     animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
-}
-
 #power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
+    color: #f53c3c;
 }
 
 #power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
+    color: #2980b9;
 }
 
 #power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
+    color: #2ecc71;
 }
 
 label:focus {
     background-color: #000000;
-}
-
-#cpu {
-    background-color: @bg;
-    color: @fg;
-}
-
-#memory {
-    background-color: @bg;
-}
-
-#disk {
-    background-color: @bg;
-}
-
-#backlight {
-    background-color: @bg;
-    color: @fg;
-}
-
-#wireplumber {
-    background-color: @bg;
-    color: @fg;
 }
 
 #wireplumber.muted {
@@ -182,7 +118,7 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
+    background-color: @bg;
 }
 
 #temperature.critical {
@@ -225,29 +161,4 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
-}
-
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
-}
-
-#privacy-item.location {
-    background-color: #00afff;
 }
