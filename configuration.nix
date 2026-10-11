@@ -46,6 +46,7 @@
   services.displayManager.ly = {
     enable = true;
   };
+  services.power-profiles-daemon.enable = true;
   environment.sessionVariables = {
     XDG_PICTURES_DIR = "$HOME/Pictures";
     QT_QPA_PLATFORM = "wayland;xcb";
