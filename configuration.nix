@@ -67,6 +67,7 @@
     proton-vpn
     kdePackages.kdeconnect-kde
     imv
+    librsvg
     zathura
     texliveSmall
     git
