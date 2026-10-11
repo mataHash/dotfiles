@@ -20,3 +20,7 @@ git clone mataHash/dotfiles
 sudo nixos-rebuild switch --flake ~/dotfiles
 ```
 - Done
+## examples
+![first one](./20261011_18h32m56s_grim.png)
+![second one](./20261011_18h32m57s_grim.png)
+![third one](./20261011_18h33m27s_grim.png)
