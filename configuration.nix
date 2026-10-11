@@ -99,11 +99,7 @@
     kubectl
     k3s
     qemu
-    swtpm
-    quickemu
     base16-schemes
-    bitwarden-cli
-    ags
     pandoc
     fuzzel
     waybar
@@ -113,6 +109,8 @@
     swayosd
     mermerd
     mermaid-cli
+    hypridle
+    hyprlock
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
