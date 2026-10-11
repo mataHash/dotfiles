@@ -266,7 +266,7 @@ hl.bind(
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 )
 
-hl.bind(mainMod .. "+ SHIFT + V", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. "+ SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. "+ SHIFT + V", hl.dsp.window.float({ action = "toggle" }))
