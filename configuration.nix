@@ -107,7 +107,7 @@
     waybar
     localsend
     syncthing
-    dunst
+    swaynotificationcenter
     swayosd
     mermerd
     mermaid-cli

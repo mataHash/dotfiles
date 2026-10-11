@@ -47,6 +47,7 @@ local menu = "fuzzel"
    hl.exec_cmd("hyprpaper &")
    hl.exec_cmd("wl-paste --type text --watch cliphist store")
    hl.exec_cmd("wl-paste --type image --watch cliphist store")
+   hl.exec_cmd("swaync")
  end)
 
 
@@ -257,6 +258,7 @@ local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser1))
 hl.bind(mainMod .. "+ SHIFT + B", hl.dsp.exec_cmd(browser2))
 
