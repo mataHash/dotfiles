@@ -21,6 +21,7 @@ sudo nixos-rebuild switch --flake ~/dotfiles
 ```
 - Done
 ## examples
-![first one](./20261011_18h32m56s_grim.png)
+![first one](./20261011_18h39m22s_grim.png)
 ![second one](./20261011_18h32m57s_grim.png)
 ![third one](./20261011_18h33m27s_grim.png)
+![fourth one](./20261011_18h39m36s_grim.png)
