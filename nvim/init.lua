@@ -90,6 +90,10 @@ do
 	vim.opt.clipboard = "unnamedplus"
 
 	vim.o.confirm = true
+
+vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
+vim.opt.undolevels = 10000
 end
 
 -- ============================================================
@@ -175,7 +179,6 @@ do
 end
 
 do
-
 	local function run_build(name, cmd, cwd)
 		local result = vim.system(cmd, { cwd = cwd }):wait()
 		if result.code ~= 0 then
@@ -685,12 +688,12 @@ do
 		pyright = {},
 		rust_analyzer = {},
 		nil_ls = {},
-    roslyn_ls  = {},
-    sqls = {},
-    vtsls = {},
-    hls = {},
-    vue_ls = {},
-    astro = {},
+		roslyn_ls = {},
+		postgres_lsp = {},
+		vtsls = {},
+		hls = {},
+		vue_ls = {},
+		astro = {},
 		lua_ls = {
 			on_init = function(client)
 				client.server_capabilities.documentFormattingProvider = false -- Disable formatting (formatting is done by stylua)
