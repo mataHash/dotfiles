@@ -45,6 +45,8 @@ local menu = "fuzzel"
    hl.exec_cmd(terminal)
    hl.exec_cmd("waybar &")
    hl.exec_cmd("hyprpaper &")
+   hl.exec_cmd("wl-paste --type text --watch cliphist store")
+   hl.exec_cmd("wl-paste --type image --watch cliphist store")
  end)
 
 
@@ -257,13 +259,16 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser1))
 hl.bind(mainMod .. "+ SHIFT + B", hl.dsp.exec_cmd(browser2))
+
 hl.bind(mainMod .. "+ Print", hl.dsp.exec_cmd("hyprpicker"))
 hl.bind("SHIFT" .. "+ Print", hl.dsp.exec_cmd('grim -g "$(slurp)"'))
 hl.bind("Print", hl.dsp.exec_cmd("grim"))
+
 local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
+hl.bind(mainMod .. "+ SHIFT + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. "+ SHIFT + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
