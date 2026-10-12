@@ -33,6 +33,14 @@
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
+  virtualisation.docker = {
+    enable = false;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
+
   programs.firefox.enable = true;
   hardware.graphics.enable = true;
   programs.uwsm.enable = true;
@@ -95,7 +103,6 @@
     grim
     slurp
     fastfetch
-    docker
     kubectl
     k3s
     qemu
