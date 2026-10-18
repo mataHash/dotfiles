@@ -69,6 +69,7 @@
     curl
     gawk
     jq
+    html-tidy
     ffmpeg
     vlc
     hyprpaper
