@@ -80,7 +80,7 @@
     zathura
     texliveSmall
     git
-    lynx
+    w3m
     ddgr
     kitty
     hyprpicker
@@ -94,6 +94,9 @@
     fd
     tree-sitter
     gcc
+    clang-tools
+    clang
+    gdb
     nil
     alejandra
     lua-language-server
