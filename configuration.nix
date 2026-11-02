@@ -74,7 +74,6 @@
     vlc
     hyprpaper
     proton-vpn
-    kdePackages.kdeconnect-kde
     imv
     librsvg
     zathura
@@ -116,6 +115,8 @@
     waybar
     localsend
     syncthing
+    thunderbird
+    rustdesk-flutter
     swaynotificationcenter
     swayosd
     mermerd
