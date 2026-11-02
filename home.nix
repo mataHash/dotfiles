@@ -92,10 +92,4 @@
     nerd-fonts.hack
     nerd-fonts.jetbrains-mono
   ];
-
-  services.mpd = {
-    enable = true;
-    musicDirectory = /home/mata/Music;
-    # network.listenAddress = "any";
-  };
 }
