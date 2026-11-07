@@ -26,12 +26,8 @@
 
   users.users.mata = {
     isNormalUser = true;
-    extraGroups = ["networkmanager" "vboxusers" "wheel" "kvm" "input"];
+    extraGroups = ["networkmanager" "wheel" "kvm" "input"];
   };
-  nixpkgs.config.allowUnfree = true;
-
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   virtualisation.docker = {
     enable = false;
