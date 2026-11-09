@@ -91,9 +91,9 @@ do
 
 	vim.o.confirm = true
 
-vim.opt.undofile = true
-vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
-vim.opt.undolevels = 10000
+	vim.opt.undofile = true
+	vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undo"
+	vim.opt.undolevels = 10000
 end
 
 -- ============================================================
@@ -688,7 +688,7 @@ do
 		pyright = {},
 		rust_analyzer = {},
 		nil_ls = {},
-		roslyn_ls = {},
+		csharp_ls = {},
 		postgres_lsp = {},
 		vtsls = {},
 		hls = {},
@@ -751,7 +751,7 @@ do
 				lua = true,
 				python = true,
 				nix = true,
-        rust = true,
+				rust = true,
 			}
 			if enabled_filetypes[vim.bo[bufnr].filetype] then
 				return { timeout_ms = 500 }
