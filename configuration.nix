@@ -60,6 +60,7 @@
   };
   environment.systemPackages = with pkgs; [
     tree
+    bc
     wget
     neovim
     curl
