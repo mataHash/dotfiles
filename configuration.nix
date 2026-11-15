@@ -71,6 +71,8 @@
     vlc
     hyprpaper
     proton-vpn
+    obs-studio
+    kdePackages.kdenlive
     imv
     librsvg
     zathura
