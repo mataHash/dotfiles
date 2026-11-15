@@ -690,7 +690,31 @@ do
 		nil_ls = {},
 		csharp_ls = {},
 		postgres_lsp = {},
-		vtsls = {},
+		vtsls = {
+			filetypes = {
+				"javascript",
+				"javascriptreact",
+				"typescript",
+				"typescriptreact",
+				"vue",
+			},
+
+			settings = {
+				vtsls = {
+					tsserver = {
+						globalPlugins = {
+							{
+								name = "@vue/typescript-plugin",
+								location = vim.env.VUE_TS_PLUGIN,
+								languages = { "vue" },
+								configNamespace = "typescript",
+							},
+						},
+					},
+				},
+			},
+		},
+
 		hls = {},
 		vue_ls = {},
 		astro = {},
