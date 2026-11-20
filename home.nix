@@ -91,5 +91,6 @@
     nerd-fonts.fira-code
     nerd-fonts.hack
     nerd-fonts.jetbrains-mono
+    unstable.opencode
   ];
 }

@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -7,8 +11,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_7_1;
   networking.hostName = "nixos";
 
   networking.networkmanager.enable = true;
@@ -23,6 +26,17 @@
     enable = true;
     pulse.enable = true;
   };
+  nixpkgs.config.allowUnfree = true;
+  services.xserver.videoDrivers = ["nvidia"];
+
+  hardware.nvidia = {
+    open = true;
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+  hardware.nvidia-container-toolkit.enable = true;
 
   users.users.mata = {
     isNormalUser = true;
@@ -91,6 +105,7 @@
     ripgrep
     fd
     tree-sitter
+    ollama-cuda
     gcc
     clang-tools
     clang
@@ -122,6 +137,7 @@
     mermaid-cli
     hypridle
     hyprlock
+    zettlr
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
