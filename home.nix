@@ -12,6 +12,7 @@
 
     plugins = with pkgs.vimPlugins; [
       nvim-lspconfig
+      render-markdown-nvim
       guess-indent-nvim
       gitsigns-nvim
       which-key-nvim

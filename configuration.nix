@@ -137,7 +137,6 @@
     mermaid-cli
     hypridle
     hyprlock
-    zettlr
     yamllint
     yq
   ];
