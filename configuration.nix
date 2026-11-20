@@ -138,6 +138,8 @@
     hypridle
     hyprlock
     zettlr
+    yamllint
+    yq
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
