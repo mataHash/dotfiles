@@ -73,7 +73,9 @@
     _JAVA_AWT_OBNX_WM_NONREPARENTING = "1";
   };
   environment.systemPackages = with pkgs; [
+    config.boot.kernelPackages.perf
     tree
+    act
     bc
     wget
     neovim
