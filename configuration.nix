@@ -40,16 +40,10 @@
 
   users.users.mata = {
     isNormalUser = true;
-    extraGroups = ["networkmanager" "wheel" "kvm" "input"];
+    extraGroups = ["networkmanager" "wheel" "kvm" "input" "docker"];
   };
 
-  virtualisation.docker = {
-    enable = false;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
-  };
+  virtualisation.docker.enable = true;
 
   programs.firefox.enable = true;
   hardware.graphics.enable = true;
@@ -106,6 +100,7 @@
     github-cli
     ripgrep
     fd
+    keepassxc
     tree-sitter
     ollama-cuda
     gcc
@@ -123,7 +118,7 @@
     slurp
     fastfetch
     kubectl
-    k3s
+    kind
     qemu
     base16-schemes
     pandoc
